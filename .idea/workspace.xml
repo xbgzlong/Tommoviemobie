@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caac265f-9d90-4d6e-b844-06ef67c985e9" name="默认的" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/moviecat_node_modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tomJiaResume" afterPath="$PROJECT_DIR$/tomJiaResume" />
     </list>
     <ignored path="moviecat.iws" />
     <ignored path=".idea/workspace.xml" />
