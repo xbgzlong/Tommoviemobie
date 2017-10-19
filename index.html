@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,
+    minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>TOM影评</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/wap.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+</head>
+<body ng-app="main">
+    <!-- 顶部导航栏开始 -->
+    <header class="top">
+        <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+            <ul class="tom-topul">
+                <li class="tom-photo-big navbar-left" id="tomPhotoBig">
+                    <a href="#/"><img src="assets/img/tomcat.jpg" alt="" class="img-circle "/><span>TOM影评</span></a>
+                </li>
+                <li class="navbar-header ">
+                    <button id="navbar-header"
+                            type="button" class=" tom-collapsed navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </li>
+                <li class="right-titel navbar-left hidden-xs">
+                    <ul class="nav nav-pills" id="nav-pills">
+                        <li auto-active class="active tom-present"><a href="#/">首页</a></li>
+                        <li auto-active class="tom-present"><a href="#/in_theaters">正在热映</a></li>
+                        <li auto-active class="tom-present"><a href="#/coming_soon">即将上映</a></li>
+                        <li auto-active class="tom-present"><a href="#/top250">Top250</a></li>
+                    </ul>
+
+                </li>
+                <li class="navbar-form  hidden-xs search">
+                    <div class="form-group">
+                        <input ng-model="query" type="text" class="form-control my-input" placeholder="电影搜索">
+                    </div>
+                    <button type="submit" class="btn btn-default"><a href="#/search?q={{query}}">搜索</a></button>
+                </li>
+            </ul>
+            <span class="hidden-lg hidden-md hidden-sm tom-serch">
+                <a href=""><img src="assets/img/serch.png" alt=""/></a>
+            </span>
+            <div class="tom-hidden hidecss " id="tom-hidden">
+                <ul id="tom-pills">
+                    <li auto-active class="active tom-present"  class="tom-present"><a href="#/">首页</a></li>
+                    <li auto-active class="tom-present"><a href="#/in_theaters">正在热映</a></li>
+                    <li auto-active class="tom-present"><a href="#/coming_soon">即将上映</a></li>
+                    <li auto-active class="tom-present"><a href="#/top250">Top250</a></li>
+                </ul>
+            </div>
+            <div class="tom-hiddenForm hidecss">
+                <div class="form-group">
+                    <input ng-model="query" type="text" class="form-control my-input" placeholder="电影搜索">
+                </div>
+                <button type="submit" class="btn btn-default"><a href="#/search?q={{query}}">搜索</a></button>
+            </div>
+        </nav>
+
+    </header>
+    <!-- 顶部导航栏结束 -->
+    <main class="container">
+        <div ng-view>
+            <!-- 首页开始 -->
+            <div class="list">
+                <!-- 首页就是一张图片 -->
+                <img src="assets/img/home_page.png" alt="">
+            </div>
+            <!-- 首页结束 -->
+        </div>
+        <!--其他-->
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>版权所有&copy;made by TomJ 2017 10 20</p>
+        </div>
+    </footer>
+    <script src="assets/js/jquery-1.12.2.min.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/prefixfree.min.js"></script>
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-route/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="./home/home.js"></script>
+    <script src="./movie_list/movie_list.js"></script>
+    <script src="./services/jsonpServices.js"></script>
+    <script src="./auto-active.js"></script>
+    <script src="details/details.js"></script>
+</body>
+
+</html>
