@@ -33,7 +33,7 @@
     var start  = ($scope.page-1)*$scope.pageSize  // 从第几条开始
 
 
-    MyService.jsonp('api.douban.com/v2/movie/'+$routeParams.movieType,
+    MyService.jsonp('http://api.douban.com/v2/movie/'+$routeParams.movieType,
       {start:start,count:$scope.pageSize,q:$routeParams.q},function(data){
         $scope.data = data // 在异步给数据模型赋值，angular不会知道
 
